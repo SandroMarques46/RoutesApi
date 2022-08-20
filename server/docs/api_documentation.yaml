@@ -1,0 +1,146 @@
+openapi: 3.0.0
+info:
+  description: Indie Campers API
+  version: "1.0.0"
+  title: Indie Campers API
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+paths:
+  /routes:
+    get:
+      summary: Get all routes
+      parameters:
+        - in: query
+          name: start_latitude
+          required: true
+          schema:
+            type: number
+            format: double
+          description: Latitude of Start position
+        - in: query
+          name: start_longitude
+          required: true
+          schema:
+            type: number
+            format: double
+          description: Longitude of Start position
+        - in: query
+          name: end_latitude
+          required: true
+          schema:
+            type: number
+            format: double
+          description: Latitude of End position
+        - in: query
+          name: end_longitude
+          required: true
+          schema:
+            type: number
+            format: double
+          description: Longitude of End position  
+      responses:
+        '200':
+          description: Returns possible routes (0 or more)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  routes:
+                    $ref: '#/components/schemas/RoutesList'
+        '500':
+          $ref: '#/components/responses/ServerSideError'
+  /highlight:
+    get:
+      summary: Get nearest highlight
+      parameters:
+        - in: query
+          name: latitude
+          required: true
+          schema:
+            type: number
+            format: double
+          description: Latitude of position
+        - in: query
+          name: longitude
+          required: true
+          schema:
+            type: number
+            format: double
+          description: Longitude of position
+      responses:
+          '200':
+            description: Returns possible routes (0 or more)
+            content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    highlight:
+                      $ref: '#/components/schemas/Highlight'
+                    distance:
+                      type: integer
+          '500':
+            $ref: '#/components/responses/ServerSideError'
+components:
+  responses:
+    ServerSideError:
+      description: Server side error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    Error:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string
+    RoutesList:
+      type: array
+      items:
+        type: object
+        items:
+          $ref: '#/components/schemas/Route'
+    Route:
+      type: object
+      properties:
+        id:
+          type: integer
+        description:
+          type: string
+        start_latitude:
+          type: number
+          format: double
+        start_longitude:
+          type: number
+          format: double
+        end_latitude:
+          type: number
+          format: double
+        end_longitude:
+          type: number
+          format: double
+        highlights:
+          type: array
+          items:
+            type: object
+            items:
+              $ref: '#/components/schemas/Highlight'
+    Highlight:
+      type: object
+      properties:
+        id:
+          type: integer
+        location_id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        rating:
+          type: number
+          format: float

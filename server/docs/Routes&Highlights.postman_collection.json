@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "9256f54b-f43c-43aa-bac9-beed458e1d2d",
+		"name": "Routes&Highlights",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18568539"
+	},
+	"item": [
+		{
+			"name": "Nearest Highlight",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/highlight?latitude=38.500000&longitude=-9.000000",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"highlight"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "38.500000"
+						},
+						{
+							"key": "longitude",
+							"value": "-9.000000"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Nearest Highlight",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/highlight?latitude=38.500000&longitude=-9.000000",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"highlight"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "38.500000"
+								},
+								{
+									"key": "longitude",
+									"value": "-9.000000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "145"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"91-d5NhyY2aFgBUmb3AP7sjups+H6s\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Aug 2022 13:04:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"highlight\": {\n        \"id\": 4,\n        \"name\": \"Comporta\",\n        \"description\": \"Very nice beach!\",\n        \"rating\": 4.1,\n        \"latitude\": 38.382459,\n        \"longitude\": -8.78538\n    },\n    \"distance\": 22834\n}"
+				}
+			]
+		},
+		{
+			"name": "Routes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/routes?start_latitude=38.695945&start_longitude=-9.430056&end_latitude=38.687659&end_longitude=-9.344317",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"routes"
+					],
+					"query": [
+						{
+							"key": "start_latitude",
+							"value": "38.695945"
+						},
+						{
+							"key": "start_longitude",
+							"value": "-9.430056"
+						},
+						{
+							"key": "end_latitude",
+							"value": "38.687659"
+						},
+						{
+							"key": "end_longitude",
+							"value": "-9.344317"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Route from Cascais to Carcavelos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/routes?start_latitude=38.695945&start_longitude=-9.430056&end_latitude=38.687659&end_longitude=-9.344317",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"routes"
+							],
+							"query": [
+								{
+									"key": "start_latitude",
+									"value": "38.695945"
+								},
+								{
+									"key": "start_longitude",
+									"value": "-9.430056"
+								},
+								{
+									"key": "end_latitude",
+									"value": "38.687659"
+								},
+								{
+									"key": "end_longitude",
+									"value": "-9.344317"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "970"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3ca-xHDvexo8lTC1Tkz9ShJ1uiXSU54\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Aug 2022 17:44:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"description\": \"Best beaches in Cascais\",\n        \"start_latitude\": 38.676157,\n        \"start_longitude\": -9.322966,\n        \"end_latitude\": 38.734831,\n        \"end_longitude\": -9.472311,\n        \"highlights\": [\n            {\n                \"id\": 1,\n                \"location_id\": 1,\n                \"name\": \"Praia da Torre\",\n                \"description\": \"Very nice to catch some sun!\",\n                \"rating\": 4.1\n            },\n            {\n                \"id\": 2,\n                \"location_id\": 2,\n                \"name\": \"Praia do Guincho\",\n                \"description\": \"Very nice to catch some sun!\",\n                \"rating\": 4.1\n            },\n            {\n                \"id\": 3,\n                \"location_id\": 3,\n                \"name\": \"Praia de Carcavelos\",\n                \"description\": \"Very nice to catch some sun!\",\n                \"rating\": 4.1\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"description\": \"Culture route in Lisbon\",\n        \"start_latitude\": 38.692612,\n        \"start_longitude\": -9.215869,\n        \"end_latitude\": 38.763898,\n        \"end_longitude\": -9.093754,\n        \"highlights\": [\n            {\n                \"id\": 5,\n                \"location_id\": 7,\n                \"name\": \"Torre de Belém\",\n                \"description\": \"Very near the best pastéis de nata!\",\n                \"rating\": 4.2\n            },\n            {\n                \"id\": 6,\n                \"location_id\": 8,\n                \"name\": \"Oceanário\",\n                \"description\": \"Nice oceanarium!\",\n                \"rating\": 4.2\n            },\n            {\n                \"id\": 7,\n                \"location_id\": 9,\n                \"name\": \"Arco da Rua Augusta\",\n                \"description\": \"Very cool!\",\n                \"rating\": 4.2\n            }\n        ]\n    }\n]"
+				},
+				{
+					"name": "Route from Portimão to Setúbal",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/routes?start_latitude=37.142356&start_longitude=-8.537603&end_latitude=38.536056&end_longitude=-8.8837078",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"routes"
+							],
+							"query": [
+								{
+									"key": "start_latitude",
+									"value": "37.142356"
+								},
+								{
+									"key": "start_longitude",
+									"value": "-8.537603"
+								},
+								{
+									"key": "end_latitude",
+									"value": "38.536056"
+								},
+								{
+									"key": "end_longitude",
+									"value": "-8.8837078"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "970"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3ca-xHDvexo8lTC1Tkz9ShJ1uiXSU54\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Aug 2022 17:03:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"description\": \"Best beaches in Cascais\",\n        \"start_latitude\": 38.676157,\n        \"start_longitude\": -9.322966,\n        \"end_latitude\": 38.734831,\n        \"end_longitude\": -9.472311,\n        \"highlights\": [\n            {\n                \"id\": 1,\n                \"location_id\": 1,\n                \"name\": \"Praia da Torre\",\n                \"description\": \"Very nice to catch some sun!\",\n                \"rating\": 4.1\n            },\n            {\n                \"id\": 2,\n                \"location_id\": 2,\n                \"name\": \"Praia do Guincho\",\n                \"description\": \"Very nice to catch some sun!\",\n                \"rating\": 4.1\n            },\n            {\n                \"id\": 3,\n                \"location_id\": 3,\n                \"name\": \"Praia de Carcavelos\",\n                \"description\": \"Very nice to catch some sun!\",\n                \"rating\": 4.1\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"description\": \"Culture route in Lisbon\",\n        \"start_latitude\": 38.692612,\n        \"start_longitude\": -9.215869,\n        \"end_latitude\": 38.763898,\n        \"end_longitude\": -9.093754,\n        \"highlights\": [\n            {\n                \"id\": 5,\n                \"location_id\": 7,\n                \"name\": \"Torre de Belém\",\n                \"description\": \"Very near the best pastéis de nata!\",\n                \"rating\": 4.2\n            },\n            {\n                \"id\": 6,\n                \"location_id\": 8,\n                \"name\": \"Oceanário\",\n                \"description\": \"Nice oceanarium!\",\n                \"rating\": 4.2\n            },\n            {\n                \"id\": 7,\n                \"location_id\": 9,\n                \"name\": \"Arco da Rua Augusta\",\n                \"description\": \"Very cool!\",\n                \"rating\": 4.2\n            }\n        ]\n    }\n]"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3001",
+			"type": "string"
+		}
+	]
+}
